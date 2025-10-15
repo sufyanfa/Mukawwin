@@ -43,7 +43,7 @@ def get_text_from_image(image_content):
 # تمت إزالة التخزين المؤقت من هنا لإصلاح مشكلة الردود القديمة
 def analyze_with_gemini(raw_text: str):
     """يستخدم Gemini API لتحليل النص الخام واستخراج المكونات."""
-    model = genai.GenerativeModel('gemini-1.0-pro')
+    model = genai.GenerativeModel('gemini-2.5-flash')
     prompt = """
 Extract ingredient lists from the following texts. The ingredient list should start with the first ingredient and end with the last ingredient. It should not include allergy, label or origin information.
 The output format must be a single JSON list containing one element per ingredient list. If there are ingredients in several languages, the output JSON list should contain as many elements as detected languages. Each element should have two fields:
